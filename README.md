@@ -1,79 +1,138 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=19866356&assignment_repo_type=AssignmentRepo)
-# MERN Stack Integration Assignment
+# MERN Blog Application
 
-This assignment focuses on building a full-stack MERN (MongoDB, Express.js, React.js, Node.js) application that demonstrates seamless integration between front-end and back-end components.
+This is a full-stack blog application built with the MERN stack (MongoDB, Express.js, React.js, Node.js). It features user authentication, blog post creation with image uploads, commenting functionality, and protected routes.
 
-## Assignment Overview
+---
 
-You will build a blog application with the following features:
-1. RESTful API with Express.js and MongoDB
-2. React front-end with component architecture
-3. Full CRUD functionality for blog posts
-4. User authentication and authorization
-5. Advanced features like image uploads and comments
+## Features
+
+- User registration and login with JWT authentication  
+- Create, read, update, and delete (CRUD) blog posts  
+- Upload images to blog posts  
+- Comment on blog posts: add, edit, delete comments  
+- Protected routes: only logged-in users can create/edit/delete posts and comments  
+- Responsive design for desktop and mobile  
+- Clean and modern UI using Tailwind CSS  
+
+---
 
 ## Project Structure
 
-```
-mern-blog/
-├── client/                 # React front-end
-│   ├── public/             # Static files
-│   ├── src/                # React source code
-│   │   ├── components/     # Reusable components
-│   │   ├── pages/          # Page components
-│   │   ├── hooks/          # Custom React hooks
-│   │   ├── services/       # API services
-│   │   ├── context/        # React context providers
-│   │   └── App.jsx         # Main application component
-│   └── package.json        # Client dependencies
-├── server/                 # Express.js back-end
-│   ├── config/             # Configuration files
-│   ├── controllers/        # Route controllers
-│   ├── models/             # Mongoose models
-│   ├── routes/             # API routes
-│   ├── middleware/         # Custom middleware
-│   ├── utils/              # Utility functions
-│   ├── server.js           # Main server file
-│   └── package.json        # Server dependencies
-└── README.md               # Project documentation
-```
+mern-blog/  
+├── client/                 # React front-end  
+│   ├── public/             # Static files  
+│   ├── src/                # React source code  
+│   │   ├── components/     # Reusable components  
+│   │   ├── pages/          # Page components  
+│   │   ├── hooks/          # Custom hooks  
+│   │   ├── services/       # API service functions  
+│   │   ├── context/        # React context providers  
+│   │   └── App.jsx         # Main app component  
+│   └── package.json        # Client dependencies  
+├── server/                 # Express.js back-end  
+│   ├── config/             # Configuration files  
+│   ├── controllers/        # Route controllers  
+│   ├── models/             # Mongoose models  
+│   ├── routes/             # API routes  
+│   ├── middleware/         # Custom middleware  
+│   ├── utils/              # Utility functions  
+│   ├── server.js           # Main server file  
+│   └── package.json        # Server dependencies  
+└── README.md               # Project documentation  
+
+---
 
 ## Getting Started
 
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Follow the setup instructions in the `Week4-Assignment.md` file
-4. Complete the tasks outlined in the assignment
+### Prerequisites
 
-## Files Included
+- Node.js (v14 or higher recommended)  
+- MongoDB instance (local or cloud e.g. MongoDB Atlas)  
 
-- `Week4-Assignment.md`: Detailed assignment instructions
-- Starter code for both client and server:
-  - Basic project structure
-  - Configuration files
-  - Sample models and components
+### Installation
 
-## Requirements
+1. Clone the repository
 
-- Node.js (v18 or higher)
-- MongoDB (local installation or Atlas account)
-- npm or yarn
-- Git
+```bash
+git clone <your-repo-url>
+cd mern-blog
 
-## Submission
+2.Install dependencies for both client and server
 
-Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
+pnpm install
+pnpm --filter client install
+pnpm --filter server install
 
-1. Complete both the client and server portions of the application
-2. Implement all required API endpoints
-3. Create the necessary React components and hooks
-4. Document your API and setup process in the README.md
-5. Include screenshots of your working application
+3.Create .env files in both /server and /client (if needed) with environment variables
+Example for server .env
 
-## Resources
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
 
-- [MongoDB Documentation](https://docs.mongodb.com/)
-- [Express.js Documentation](https://expressjs.com/)
-- [React Documentation](https://react.dev/)
-- [Node.js Documentation](https://nodejs.org/en/docs/)
-- [Mongoose Documentation](https://mongoosejs.com/docs/) 
+4.Run the development servers concurrently
+
+pnpm run dev
+
+Frontend will run on http://localhost:5173/ (Vite default)
+
+Backend will run on http://localhost:5000/
+
+Usage
+Register a new user or login with existing credentials
+
+Create new blog posts with optional image upload
+
+View list of blog posts on the Home page
+
+Click a blog post title to view details and comments
+
+Add, edit, and delete comments on posts
+
+Edit or delete your own blog posts
+
+Technologies Used
+React.js with React Router and Tailwind CSS
+
+Node.js with Express.js
+
+MongoDB with Mongoose ODM
+
+JWT for authentication
+
+Axios for HTTP requests
+
+Nodemon and concurrently for development
+
+Future Improvements
+Add pagination or infinite scroll to blog list
+
+Enable rich text editing for blog content
+
+Enhance image upload with progress bar
+
+Add user profiles and avatar uploads
+
+Deploy to cloud hosting platforms
+
+📸 Screenshots
+Homepage
+
+
+Blog Detail Page
+
+
+Blog with Comment
+
+
+Login Page
+
+
+Homepage View 2
+
+
+Author
+Derrick Swaka
+
+Thank you for checking out my MERN blog app! Feel free to reach out for any questions.
+Email: derrickswaka910@gmail.com
