@@ -1,5 +1,7 @@
 # MERN Blog Application
 
+[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=19866356&assignment_repo_type=AssignmentRepo)
+
 This is a full-stack blog application built with the MERN stack (MongoDB, Express.js, React.js, Node.js). It features user authentication, blog post creation with image uploads, commenting functionality, and protected routes.
 
 ---
@@ -64,7 +66,6 @@ pnpm --filter client install
 pnpm --filter server install
 
 3.Create .env files in both /server and /client (if needed) with environment variables
-Example for server .env
 
 PORT=5000
 MONGO_URI=your_mongodb_connection_string
@@ -75,10 +76,9 @@ JWT_SECRET=your_jwt_secret
 pnpm run dev
 
 Frontend will run on http://localhost:5173/ (Vite default)
-
 Backend will run on http://localhost:5000/
 
-Usage
+## Usage
 Register a new user or login with existing credentials
 
 Create new blog posts with optional image upload
@@ -102,7 +102,7 @@ JWT for authentication
 
 Axios for HTTP requests
 
-Nodemon and concurrently for development
+Nodemon and concurrently for developmen
 
 Future Improvements
 Add pagination or infinite scroll to blog list
@@ -136,3 +136,14 @@ Derrick Swaka
 
 Thank you for checking out my MERN blog app! Feel free to reach out for any questions.
 Email: derrickswaka910@gmail.com
+
+Resources
+MongoDB Documentation
+
+Express.js Documentation
+
+React Documentation
+
+Node.js Documentation
+
+Mongoose Documentation
